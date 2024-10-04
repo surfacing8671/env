@@ -1,0 +1,27 @@
+type Staking_Deposit {
+  id: ID!
+  user: String!
+  pid: BigInt!
+  amount: BigInt!
+}
+
+type Staking_EmergencyWithdraw {
+  id: ID!
+  user: String!
+  pid: BigInt!
+  amount: BigInt!
+}
+
+type Staking_RewardPaid {
+  id: ID!
+  user: String!
+  amount: BigInt!
+}
+
+type Staking_Withdraw {
+  id: ID!
+  user: String!
+  pid: BigInt!
+  amount: BigInt!
+}
+

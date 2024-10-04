@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=./node_modules/envio/evm.schema.json
+name: staking
+networks:
+- id: 369
+  rpc_config:
+    url: https://rpc.pulsechain.com
+  start_block: 21496459
+  contracts:
+  - name: staking
+    address:
+    - 0xa5255A4E00d4e2762EA7e9e1Dc4Ecf68b981e760
+    handler: src/EventHandlers.ts
+    events:
+    - event: Deposit(address indexed user, uint256 indexed pid, uint256 amount)
+    - event: EmergencyWithdraw(address indexed user, uint256 indexed pid, uint256 amount)
+    - event: RewardPaid(address indexed user, uint256 amount)
+    - event: Withdraw(address indexed user, uint256 indexed pid, uint256 amount)
